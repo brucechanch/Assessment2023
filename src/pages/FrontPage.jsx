@@ -3,7 +3,7 @@ import * as Icons from '../components/Icons';
 import CompanyIcon from '../assets/logo.jpeg';
 import CollapsibleSection from '../components/CollapsibleSection/';
 import { LayerPanel } from '../components/LayerPanel'
-
+import CircularMenu from '../components/CircularMenu'
 
 
 const App = () => {
@@ -108,7 +108,7 @@ const App = () => {
   <div className="h-full flex-grow bg-[rgb(120,171,198)] p-8 relative">
     {/* Remote Menu */}
     <div className="absolute bottom-0 right-0 p-4">
-      <p> Remote Menu</p>
+      <CircularMenu />
     </div>
   </div>
 
