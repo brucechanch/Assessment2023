@@ -122,7 +122,7 @@ const handleVerifyCodeChange = (index, value) => {
       const combinedVerifyCode = formData.verifyCode.join('');
       const dataToSend = { ...formData, verifyCode: combinedVerifyCode };
       const response = await axios.post('/api/signup', dataToSend);
-      // Clear form or redirect user as needed
+      console.log(response)
     } catch (error) {
       console.error('Error during sign up:', error);
       alert('There was an error during sign up.');

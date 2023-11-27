@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaPlus, FaRegWindowMinimize } from 'react-icons/fa';
-import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import * as Icons from '../components/Icons';
 
 const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
   // State variables
@@ -78,9 +78,9 @@ const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
         <span className="font-bold">{`Section ${sectionNumber}`}</span>
         <span className="ml-auto">
           {isCollapsed ? (
-            <IoIosArrowDown className="text-gray-300" />
+            <Icons.IoIosArrowDown className="text-gray-300" />
           ) : (
-            <IoIosArrowUp className="text-gray-300" />
+            <Icons.IoIosArrowUp className="text-gray-300" />
           )}
         </span>
       </div>

@@ -10,6 +10,8 @@ import {FaRegWindowMinimize} from 'react-icons/fa'
 import { BsBox2 } from "react-icons/bs";
 import { IoWaterOutline } from "react-icons/io5";
 import { TbDropletHalf2 } from "react-icons/tb";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+
 
 
 
@@ -32,5 +34,7 @@ export {
   FaRegWindowMinimize,
   BsBox2,
   IoWaterOutline,
-  TbDropletHalf2
+  TbDropletHalf2,
+  IoIosArrowUp,
+  IoIosArrowDown
 };

@@ -165,7 +165,7 @@ const App = () => {
               {['A', 'B', 'C', 'D', 'E'].map((part) => (
               <button
               key={part}
-              className={`rounded p-2 text-sm bg-gray-100 w-1/4 ${activePart === part ? 'bg-blue-100' : 'text-gray-500'}`}
+              className={`rounded p-2 text-sm bg-gray-100 w-1/4 ${activePart === part ? 'bg-blue-300' : 'text-gray-500'}`}
               onClick={() => handlePartButtonClick(part)}
                 >
                 Part {part}

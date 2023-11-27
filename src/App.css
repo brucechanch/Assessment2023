@@ -1,57 +1,54 @@
 /* index.css */
+
 #root {
   margin: 0 auto;
-
 }
 
-
 /* Default styles */
-
 .min-h-screen {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .label {
-    color: #718096;
-    font-size: 0.875rem;
+  color: #718096;
+  font-size: 0.875rem;
 }
 
 /* Responsive styles */
-
 @media screen and (max-width: 320px) {
-    /* Styles for 320x480 screens */
-    .max-w-lg {
-        max-width: 90%;
-    }
+  /* Styles for 320x480 screens */
+  .max-w-lg {
+    max-width: 90%;
+  }
 }
 
 @media screen and (min-width: 321px) and (max-width: 640px) {
-    /* Styles for 640x960 screens */
-    .max-w-lg {
-        max-width: 80%;
-    }
+  /* Styles for 640x960 screens */
+  .max-w-lg {
+    max-width: 80%;
+  }
 }
 
 @media screen and (min-width: 641px) and (max-width: 960px) {
-    /* Styles for 960x1200 screens */
-    .max-w-lg {
-        max-width: 70%;
-    }
+  /* Styles for 960x1200 screens */
+  .max-w-lg {
+    max-width: 70%;
+  }
 }
 
 @media screen and (min-width: 961px) {
-    /* Styles for 1920x2560 screens and larger */
-    .max-w-lg {
-        max-width: 60%;
-    }
+  /* Styles for 1920x2560 screens and larger */
+  .max-w-lg {
+    max-width: 60%;
+  }
 }
 
 /* App.css */
+
 .app {
   display: flex;
   height: 100vh;
   flex-direction: column;
-
 }
 
 .header {
@@ -113,7 +110,7 @@
 
 .viewer-panel {
   flex: 1;
-  background-color:rgb(120, 171, 198);
+  background-color: rgb(120, 171, 198);
   color: white;
   padding: 20px;
   text-align: left;
@@ -142,10 +139,12 @@
     align-items: center;
     /* Center items in the column layout */
   }
+}
+
 .layer-panel {
   display: flex;
-  flex-direction: column; /* Change to column layout */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .layer-button {
@@ -153,11 +152,7 @@
   padding: 10px;
   border: none;
   cursor: pointer;
-  margin-bottom: 10px; /* Add space between buttons */
-}
-
-
-
+  margin-bottom: 10px;
 }
 
 .horizontal-layer-panel {
@@ -174,9 +169,7 @@
   margin-right: 10px;
 }
 
-
 .layer-button {
-
   color: white;
   padding: 10px;
   border: none;
@@ -184,14 +177,6 @@
   margin-right: 5px;
 }
 
-/*SU1*/
-
 input {
   width: 100%;
-}
-/* Primary Phone Number input*/
-
-
-.section1-collapsed .section2-5 {
-  @apply w-[477];
 }
