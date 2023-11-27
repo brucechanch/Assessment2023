@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { FaPlus, FaRegWindowMinimize } from 'react-icons/fa';
 import * as Icons from '../components/Icons';
 
-const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
+const CollapsibleSection = ({ children, sectionNumber }) => {
   // State variables
   const [isFunctionAClicked, setIsFunctionAClicked] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -266,7 +265,7 @@ const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
                   className="text-black"
                   onClick={increaseItemNumber}
                 >
-                  <FaPlus />
+                  <Icons.FaPlus />
                 </button>
               </div>
               {/* Input box for the item number */}
@@ -282,7 +281,7 @@ const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
                   className="text-black"
                   onClick={decreaseItemNumber}
                 >
-                  <FaRegWindowMinimize />
+                  <Icons.FaRegWindowMinimize />
                 </button>
               </div>
             </div>
@@ -297,10 +296,10 @@ const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
                   {[...Array(8).keys()].map((index) => (
                     <button
                       key={index}
-                      className={`m-1 p-1 flex-shrink-0 w-4 h-6 rounded ${buttonStates[index] ? 'bg-blue-400 text-white' : 'bg-gray-200'}`}
+                      className={`m-1  flex-shrink-0 w-4 h-5 text-xs rounded ${buttonStates[index] ? 'bg-sky-500 text-white' : 'bg-gray-200'}`}
                       onClick={() => toggleFirstSetButton(index)}
                     >
-                      {index + 1}
+                      {8 - index }
                     </button>
                   ))}
                 </div>
@@ -308,7 +307,7 @@ const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
                   {[...Array(8).keys()].map((index) => (
                     <button
                       key={index + 8}
-                      className={`m-1 p-1 flex-shrink-0 w-4 h-6 rounded ${buttonStates[index + 8] ? 'bg-blue-400 text-white' : 'bg-gray-200'}`}
+                      className={`m-1 flex-shrink-0 w-4 h-5 text-xs rounded ${buttonStates[index + 8] ? 'bg-sky-500 text-white' : 'bg-gray-200'}`}
                       onClick={() => toggleSecondSetButton(index)}
                     >
                       {index + 1}
@@ -323,10 +322,10 @@ const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
                   {[...Array(8).keys()].map((index) => (
                     <button
                       key={index + 16}
-                      className={`m-1 p-1 flex-shrink-0 w-4 h-6 rounded ${buttonStates[index + 16] ? 'bg-blue-400 text-white' : 'bg-gray-200'}`}
+                      className={`m-1  flex-shrink-0 w-4 h-5 text-xs	rounded ${buttonStates[index + 16] ? 'bg-sky-500 text-white' : 'bg-gray-200'}`}
                       onClick={() => toggleThirdSetButton(index)}
                     >
-                      {index + 1}
+                      {8 - index }
                     </button>
                   ))}
                 </div>
@@ -334,7 +333,7 @@ const CollapsibleSection = ({ title, children, isVisible, sectionNumber }) => {
                   {[...Array(8).keys()].map((index) => (
                     <button
                       key={index + 24}
-                      className={`m-1 p-1 flex-shrink-0 w-4 h-6 rounded ${buttonStates[index + 24] ? 'bg-blue-400 text-white' : 'bg-gray-200'}`}
+                      className={`m-1 flex-shrink-0 w-4 h-5 text-xs	 rounded ${buttonStates[index + 24] ? 'bg-sky-500 text-white' : 'bg-gray-200'}`}
                       onClick={() => toggleFourthSetButton(index)}
                     >
                       {index + 1}
