@@ -113,49 +113,55 @@ const App = () => {
   </div>
 
      {/* Left Side Panel for Layer 2 */}
-      <div className="fixed top-[30%] flex flex-col ">
-        <button
-          className={`border-1 p-3 border-solid rounded-tr-lg text-white bg-sky-600 ${
-            selectedButton === 'Action1' ? 'text-yellow-500' : ''
-          }`}
-          onClick={() => handlePartButtonClick('FACE')}
-        >
-          <Icons.IoLocationOutline size={30} />
-          FACE
-        </button>
-        <div
-          className="flex p-2 ml-16"
-          style={{
-            position: 'absolute',
-            ...OpacitySliderPosition,
-          }}
-        >
-          {showOpacitySlider && (
-            <>
-              <div className=" flex p-2 relative rounded-md shadow-sm bg-blue-400">
-              <Icons.IoWaterOutline size={30} className="text-white" />
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  onChange={handleOpacityChange}
-                  className=" focus:border-blue-300 w-48 h-7"
-                />
-              <Icons.TbDropletHalf2  size={30}className="ml-2 text-white "/>
-              </div>
-            </>
-          )}
-          </div>
-        <button
-          className={` border-1 p-4 border-solid rounded-br-lg text-white  bg-sky-700/75 ${
-            selectedButton === 'Action2' ? 'text-yellow-500' : ''
-          }`}
-          onClick={() => handleAdditionalAction('Action2')}
-        >
-          <Icons.PiAlienLight size={30 } />
-          JAW
-        </button>
-      </div>
+<div className="fixed top-[30%] flex flex-col">
+  <button
+    className={`border-1 p-3 border-solid rounded-tr-lg text-white bg-sky-600 ${
+      selectedButton === 'FACE' ? 'text-yellow-500' : ''
+    }`}
+    onClick={() => {
+      handlePartButtonClick('FACE');
+      setSelectedButton('FACE'); // Add this line to update the selectedButton state
+    }}
+  >
+    <Icons.IoLocationOutline size={30} />
+    FACE
+  </button>
+  <div
+    className="flex p-2 ml-16"
+    style={{
+      position: 'absolute',
+      ...OpacitySliderPosition,
+    }}
+  >
+    {showOpacitySlider && (
+      <>
+        <div className="flex p-2 relative rounded-md shadow-sm bg-blue-400">
+          <Icons.IoWaterOutline size={30} className="text-white" />
+          <input
+            type="range"
+            min="0"
+            max="100"
+            onChange={handleOpacityChange}
+            className="focus:border-blue-300 w-48 h-7"
+          />
+          <Icons.TbDropletHalf2 size={30} className="ml-2 text-white" />
+        </div>
+      </>
+    )}
+  </div>
+  <button
+    className={`border-1 p-4 border-solid rounded-br-lg text-white bg-sky-700/75 ${
+      selectedButton === 'JAW' ? 'text-yellow-500' : ''
+    }`}
+    onClick={() => {
+      handleAdditionalAction('JAW');
+      setSelectedButton('JAW'); // Add this line to update the selectedButton state
+    }}
+  >
+    <Icons.PiAlienLight size={30} />
+    JAW
+  </button>
+</div>
 
         {/* Side Panel */}
         <div className={`overflow-hidden transition-width ${isSidePanelOpen ? 'max-w-400' : 'w-0'}`}>
