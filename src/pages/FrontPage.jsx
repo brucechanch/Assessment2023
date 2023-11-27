@@ -165,12 +165,10 @@ const App = () => {
               {['A', 'B', 'C', 'D', 'E'].map((part) => (
               <button
               key={part}
-              className={`rounded p-2 text-sm bg-gray-100 w-1/4 ${activePart === part ? 'bg-blue-300' : 'text-gray-500'}`}
-              onClick={() => handlePartButtonClick(part)}
-                >
-                Part {part}
+              className={`rounded p-2 text-sm ${activePart === part ? 'bg-blue-300 text-white' : 'bg-gray-100 text-gray-500'} w-1/4`}
+              onClick={() => handlePartButtonClick(part)} >  Part {part}
               </button>
-              ))}
+                ))}
                 </div>
               {/* Sections based on the number of sections you want */}
               {[1, 2, 3, 4, 5].map((sectionNumber) => (
