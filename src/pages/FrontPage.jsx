@@ -120,7 +120,7 @@ const App = () => {
     }`}
     onClick={() => {
       handlePartButtonClick('FACE');
-      setSelectedButton('FACE'); // Add this line to update the selectedButton state
+      setSelectedButton('FACE');
     }}
   >
     <Icons.IoLocationOutline size={30} />
@@ -155,7 +155,7 @@ const App = () => {
     }`}
     onClick={() => {
       handleAdditionalAction('JAW');
-      setSelectedButton('JAW'); // Add this line to update the selectedButton state
+      setSelectedButton('JAW');
     }}
   >
     <Icons.PiAlienLight size={30} />
@@ -176,7 +176,6 @@ const App = () => {
               </button>
                 ))}
                 </div>
-              {/* Sections based on the number of sections you want */}
               {[1, 2, 3, 4, 5].map((sectionNumber) => (
                 <CollapsibleSection key={sectionNumber} sectionNumber={sectionNumber} />
               ))}
